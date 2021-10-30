@@ -23,6 +23,7 @@ resource "azurerm_resource_group" "tfstate" {
   tags = {
     environment = "staging"
     provisioner = "terraform"
+    pipeline    = "GitHub Actions"
     team        = "devops"
   }
 }
