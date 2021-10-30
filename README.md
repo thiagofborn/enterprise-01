@@ -70,3 +70,4 @@ That will force the **Reopen in Container** to show up.
 
 ## From the DEV Container to new Environment
 
+* [Enterprise Landing Zone](./enterprise-landing-zone.md)

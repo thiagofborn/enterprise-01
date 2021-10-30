@@ -23,3 +23,12 @@ git branch -M main
 git remote add origin https://github.com/thiagofborn/enterprise-01.git
 git push -u origin main
 ```
+
+## Second step
+
+1. Building the launchpad
+    * Create directory **launchpad**
+    * Crete the terraform template files
+    * Setup GH with the secrets - Service Principal
+    * Create the directory for the GH Workflows
+    * Commit and push
