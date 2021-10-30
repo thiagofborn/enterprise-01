@@ -32,3 +32,9 @@ git push -u origin main
     * Setup GH with the secrets - Service Principal
     * Create the directory for the GH Workflows
     * Commit and push
+
+## Only one run
+
+>This will create the **launchpad** to keep the Terraform state for future resources creation.
+
+If you try to do something via Terraform on it a error will be presented [Error reference](https://github.com/thiagofborn/enterprise-01/runs/4054951431?check_suite_focus=true).
