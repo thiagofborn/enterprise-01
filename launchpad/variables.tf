@@ -16,5 +16,6 @@ variable "resource_tags" {
   default = {
     project     = "enterprise",
     environment = "dev"
+    pipeline    = "GitHub Actions"
   }
 }

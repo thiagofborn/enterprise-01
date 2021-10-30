@@ -12,7 +12,7 @@ rm -rf .git
 
 2. Creating a new GitHub repo
 
-Got to your GitHub account and create a new repo.
+Go to your GitHub account and create a new repo.
 
 ```
 echo "# enterprise-01" >> README.md
