@@ -39,30 +39,7 @@ resource "azurerm_subnet" "hub-dmz" {
   address_prefixes     = var.address_prefixes_dmz
 }
 
-<<<<<<< HEAD
-resource "azurerm_network_interface" "hub-nic" {
-  name                 = "${local.prefix-hub}-nic-${local.postfix}"
-  location             = azurerm_resource_group.network-ent-we-01.location
-  resource_group_name  = azurerm_resource_group.network-ent-we-01.name
-  enable_ip_forwarding = true
-
-  ip_configuration {
-    name                          = local.prefix-hub
-    subnet_id                     = azurerm_subnet.hub-mgmt.id
-    private_ip_address_allocation = "Dynamic"
-  }
-
-  tags = {
-    environment = local.prefix-hub
-  }
-}
-
-# Virtual Network Gateway
-resource "azurerm_public_ip" "hub-vpn-gw-pip-ent-we-01" {
-=======
-# Virtual Network Gateway
 resource "azurerm_public_ip" "vpngw-pip-ent-we-01" {
->>>>>>> f501b9a (:()
   name                = "vpngw-pip-ent-we-01"
   location            = azurerm_resource_group.network-ent-we-01.location
   resource_group_name = azurerm_resource_group.network-ent-we-01.name
@@ -83,20 +60,12 @@ resource "azurerm_virtual_network_gateway" "hub-vnet-gateway" {
 
   ip_configuration {
     name                          = "vnetGatewayConfig"
-<<<<<<< HEAD
-    public_ip_address_id          = azurerm_public_ip.hub-vpn-gw-pip-ent-we-01.id
-=======
     public_ip_address_id          = azurerm_public_ip.vpngw-pip-ent-we-01.id
->>>>>>> f501b9a (:()
     private_ip_address_allocation = "Dynamic"
     subnet_id                     = azurerm_subnet.hub-gateway-subnet.id
   }
 
-<<<<<<< HEAD
-  depends_on = [azurerm_public_ip.hub-vpn-gw-pip-ent-we-01]
-=======
   depends_on = [azurerm_public_ip.vpngw-pip-ent-we-01]
->>>>>>> f501b9a (:()
 }
 
 resource "azurerm_local_network_gateway" "local-network-gateway-op" {
