@@ -81,9 +81,9 @@ resource "azurerm_virtual_network_gateway_connection" "azure_to_on-prem" {
   location            = azurerm_resource_group.network-ent-we-01.location
   resource_group_name = azurerm_resource_group.network-ent-we-01.name
 
-  type                            = "IPsec"
-  virtual_network_gateway_id      = azurerm_virtual_network_gateway.hub-vnet-gateway.id
-  local_network_gateway_id        = azurerm_local_network_gateway.local-network-gateway-op.id
+  type                       = "IPsec"
+  virtual_network_gateway_id = azurerm_virtual_network_gateway.hub-vnet-gateway.id
+  local_network_gateway_id   = azurerm_local_network_gateway.local-network-gateway-op.id
 
   shared_key = var.ikea2_op_to_ent
 }
