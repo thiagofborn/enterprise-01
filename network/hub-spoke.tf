@@ -7,6 +7,7 @@ locals {
 resource "azurerm_resource_group" "network-ent-we-01" {
   name     = local.hub-resource-group
   location = local.hub-location
+  tags     = var.resource_tags
 }
 
 resource "azurerm_virtual_network" "hub-vnet" {

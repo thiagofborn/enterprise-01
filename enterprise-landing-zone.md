@@ -29,7 +29,9 @@ git push -u origin main
 1. Building the launchpad
     * Create directory **launchpad**
     * Crete the terraform template files
-    * Setup GH with the secrets - Service Principal
+    * Setup GH with the secrets - Service Principal - PAT Token
+        * [Azure Service Principal](https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal)
+        * [PAT Token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token)
     * Create the directory for the GH Workflows
     * Commit and push
 
