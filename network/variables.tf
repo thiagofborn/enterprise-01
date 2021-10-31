@@ -56,6 +56,7 @@ variable "resource_tags" {
     project     = "enterprise",
     environment = "dev"
     pipeline    = "GitHub Actions"
+    provisioner = "Terrafrom"
   }
 }
 
