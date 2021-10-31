@@ -5,6 +5,9 @@ on:
       - main
     paths:
       - network/main.tf
+      - network/hub-spoke.tf
+      - network/variables.tf
+      - network/terraform.tfvars 
 
 name: 'Workspace network'
 defaults:
