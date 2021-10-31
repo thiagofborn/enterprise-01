@@ -28,10 +28,13 @@ variable "gateway_address_op" {
 variable "address_space_op" {
     description = "The address space from the on-premises"
 }
+<<<<<<< HEAD
 variable "bgp_peering_address_op" {
     description = "The BGP peering address from the on-premises data center. "
 }
 
+=======
+>>>>>>> f501b9a (:()
 variable "hub_address_space" {
     description = "Address space VNET-Hub"
 }
