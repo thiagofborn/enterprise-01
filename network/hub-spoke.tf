@@ -44,6 +44,7 @@ resource "azurerm_public_ip" "vpngw-pip-ent-we-01" {
   name                = "vpngw-pip-ent-we-01"
   location            = azurerm_resource_group.network-ent-we-01.location
   resource_group_name = azurerm_resource_group.network-ent-we-01.name
+  tags                = var.resource_tags
 
   allocation_method = "Dynamic"
 }
@@ -52,6 +53,7 @@ resource "azurerm_virtual_network_gateway" "hub-vnet-gateway" {
   name                = "vpngw-ent-we-01"
   location            = azurerm_resource_group.network-ent-we-01.location
   resource_group_name = azurerm_resource_group.network-ent-we-01.name
+  tags                = var.resource_tags
 
   type     = "Vpn"
   vpn_type = "RouteBased"
